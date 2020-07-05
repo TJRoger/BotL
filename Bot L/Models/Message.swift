@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Message {
+    var content: String
+    var user: User
+}

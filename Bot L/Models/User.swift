@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct User {
+    var name: String
+    var avatar: String
+    var isCurrentUser: Bool
+}
