@@ -14,6 +14,9 @@
 		B89E506D24B16CFC0022F9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89E506C24B16CFC0022F9C7 /* Preview Assets.xcassets */; };
 		B89E507024B16CFC0022F9C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89E506E24B16CFC0022F9C7 /* LaunchScreen.storyboard */; };
 		B89E507B24B16CFD0022F9C7 /* Bot_LTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E507A24B16CFD0022F9C7 /* Bot_LTests.swift */; };
+		B89E508924B171E60022F9C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E508824B171E60022F9C7 /* User.swift */; };
+		B89E508B24B171ED0022F9C7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E508A24B171ED0022F9C7 /* Message.swift */; };
+		B89E508E24B172FA0022F9C7 /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E508D24B172FA0022F9C7 /* ContentMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		B89E507624B16CFD0022F9C7 /* Bot LTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bot LTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89E507A24B16CFD0022F9C7 /* Bot_LTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bot_LTests.swift; sourceTree = "<group>"; };
 		B89E507C24B16CFD0022F9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B89E508824B171E60022F9C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B89E508A24B171ED0022F9C7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B89E508D24B172FA0022F9C7 /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +85,11 @@
 		B89E506224B16CF30022F9C7 /* Bot L */ = {
 			isa = PBXGroup;
 			children = (
+				B89E508C24B172D80022F9C7 /* Views */,
+				B89E508724B171D80022F9C7 /* Models */,
+				B89E508624B171AF0022F9C7 /* Controllers */,
 				B89E506324B16CF30022F9C7 /* AppDelegate.swift */,
 				B89E506524B16CF30022F9C7 /* SceneDelegate.swift */,
-				B89E506724B16CF40022F9C7 /* ContentView.swift */,
 				B89E506924B16CFC0022F9C7 /* Assets.xcassets */,
 				B89E506E24B16CFC0022F9C7 /* LaunchScreen.storyboard */,
 				B89E507124B16CFC0022F9C7 /* Info.plist */,
@@ -105,6 +113,31 @@
 				B89E507C24B16CFD0022F9C7 /* Info.plist */,
 			);
 			path = "Bot LTests";
+			sourceTree = "<group>";
+		};
+		B89E508624B171AF0022F9C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B89E508724B171D80022F9C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B89E508824B171E60022F9C7 /* User.swift */,
+				B89E508A24B171ED0022F9C7 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B89E508C24B172D80022F9C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B89E506724B16CF40022F9C7 /* ContentView.swift */,
+				B89E508D24B172FA0022F9C7 /* ContentMessageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89E508E24B172FA0022F9C7 /* ContentMessageView.swift in Sources */,
+				B89E508924B171E60022F9C7 /* User.swift in Sources */,
 				B89E506424B16CF30022F9C7 /* AppDelegate.swift in Sources */,
+				B89E508B24B171ED0022F9C7 /* Message.swift in Sources */,
 				B89E506624B16CF30022F9C7 /* SceneDelegate.swift in Sources */,
 				B89E506824B16CF40022F9C7 /* ContentView.swift in Sources */,
 			);
