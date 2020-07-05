@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Message {
+struct Message: Hashable {
     var content: String
     var user: User
+    var color: Color
 }
