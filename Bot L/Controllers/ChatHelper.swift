@@ -8,12 +8,30 @@
 
 import Combine
 
-class ChatHelper: ObservableObject {
+class ChatHelper: ObservableObject, BotDelegate {
+
+    var bot: Bot
+    let voice: Voice
     var didChange = PassthroughSubject<Void, Never>()
     @Published var messages = DataSource.messages
     
+    init() {
+        bot = Bot()
+        voice = Voice()
+        bot.delegate = self
+    }
+    
+    func didReceive(reply: String) {
+        let msg = Message(content: reply, user: DataSource.secondUser, color: .orange)
+        messages.append(msg)
+        didChange.send(())
+        voice.speak(sentense: reply)
+    }
+    
     func sendMessage(_ chatMessage: Message) {
         messages.append(chatMessage)
+        bot.asyncReply(for: chatMessage.content)
         didChange.send(())
     }
 }
+

@@ -12,5 +12,5 @@ import SwiftUI
 struct Message: Hashable {
     var content: String
     var user: User
-    var color: Color
+    var color: Color = Color.black
 }

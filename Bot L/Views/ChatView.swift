@@ -36,14 +36,19 @@ struct ChatView: View {
                     Button(action: sendMessage) {
                         Text("Send")
                     }
+                    .disabled(typingMessage == "")
                 }
                 
             }
+        .keyboardAware()
             .navigationBarTitle(Text(DataSource.secondUser.name), displayMode: .inline)
         }
     }
 
     func sendMessage() {
+        guard "" != typingMessage else {
+            return
+        }
         chatHelper.sendMessage(Message(content: typingMessage, user: DataSource.firstUser))
         typingMessage = ""
     }
