@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DataSource {
-    static let  secondUser = User(name: "L", avatar: "L", isCurrentUser: false)
-    static let firstUser = User(name: "Tina", avatar: "Tina", isCurrentUser: true)
+    static let currentUser = "Tina"
+    static let remoteUser = "L"
+    static let  secondUser = User(name: remoteUser, avatar: remoteUser, isCurrentUser: false)
+    static let firstUser = User(name: currentUser, avatar: currentUser, isCurrentUser: true)
     static var messages = [Message]()
     init() {
     }

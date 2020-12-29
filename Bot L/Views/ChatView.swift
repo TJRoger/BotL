@@ -12,11 +12,7 @@ struct ChatView: View {
     init() {
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().tableFooterView = UIView()
-        
-        DataSource.messages = [
-            Message(content: "I Love You", user: DataSource.secondUser),
-            Message(content: "What's the meaning if I don't love you", user: DataSource.firstUser)
-        ]
+        DbHelper.shared.loadMessages()
     }
     @State var typingMessage: String = ""
     @EnvironmentObject var chatHelper: ChatHelper
@@ -28,13 +24,17 @@ struct ChatView: View {
                         MessageView(checkedMessage: msg)
                     }
                 }
+                .padding(0)
+                
                 HStack {
                     TextField("Message...", text: $typingMessage)
+                        
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(minHeight: CGFloat(30))
                     
                     Button(action: sendMessage) {
                         Text("Send")
+                            .padding(4)
                     }
                     .disabled(typingMessage == "")
                 }

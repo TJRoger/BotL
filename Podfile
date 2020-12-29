@@ -6,6 +6,7 @@ target 'Bot L' do
   use_frameworks!
   pod "Alamofire"
   pod "SwiftyJSON"
+  pod "RealmSwift"
 
   # Pods for Bot L
 

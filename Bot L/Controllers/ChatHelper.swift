@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Foundation
 
 class ChatHelper: ObservableObject, BotDelegate {
 
@@ -26,12 +27,14 @@ class ChatHelper: ObservableObject, BotDelegate {
         messages.append(msg)
         didChange.send(())
         voice.speak(sentense: reply)
+        DbHelper.shared.save(msg)
     }
     
     func sendMessage(_ chatMessage: Message) {
         messages.append(chatMessage)
         bot.asyncReply(for: chatMessage.content)
         didChange.send(())
+        DbHelper.shared.save(chatMessage)
     }
 }
 

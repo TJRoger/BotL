@@ -9,7 +9,7 @@
 import Foundation
 
 struct User: Hashable {
-    var name: String
-    var avatar: String
-    var isCurrentUser: Bool
+    dynamic var name: String
+    dynamic var avatar: String
+    dynamic var isCurrentUser: Bool
 }

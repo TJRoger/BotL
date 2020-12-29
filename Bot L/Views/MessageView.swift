@@ -13,7 +13,6 @@ struct MessageView: View {
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 15) {
-//            let currentMessage = self.currentMessage
             if !checkedMessage.user.isCurrentUser {
                 Image("L")
                     .resizable()
